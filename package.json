@@ -1,14 +1,14 @@
 {
   "name": "replay",
   "description": "When API testing slows you down: record and replay HTTP responses like a boss",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "engines": {
     "node": ">=6.0.0"
   },
   "config": {
     "tag": "next"
   },
-  "author": "Assaf Arkin <assaf@labnotes.org> (http://labnotes.org/)",
+  "author": "Assaf Arkin <assaf@labnotes.org> (http://labnotes.org/) + butchered by Simon Reilly",
   "keywords": [
     "test",
     "testing",

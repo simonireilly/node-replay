@@ -72,7 +72,11 @@ class Replay extends EventEmitter {
     this.stream = 'flowing';
 
     // Localhost servers: pass request to localhost
-    this._localhosts  = new Set([ 'localhost', '127.0.0.1', '::1' ]);
+    if (process.env.RECORD_LOCAL)
+      this._localhosts  = new Set([ '::1' ]);
+    else
+      this._localhosts  = new Set(['localhost', '127.0.0.1', '::1' ]);
+
     // Pass through requests to these servers
     this._passThrough = new Set();
     // Dropp connections to these servers
