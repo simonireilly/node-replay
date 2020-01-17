@@ -5,7 +5,6 @@ const exec        = require('gulp-exec');
 const File        = require('fs');
 const gulp        = require('gulp');
 const gutil       = require('gulp-util');
-const notify      = require('gulp-notify');
 const sourcemaps  = require('gulp-sourcemaps');
 const babel       = require('gulp-babel');
 
@@ -36,10 +35,6 @@ gulp.task('build',
         .pipe(babel())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('lib'))
-        .pipe(notify({
-          message: 'node-replay: built!',
-          onLast:  true
-        }));
     }
   )
 );
